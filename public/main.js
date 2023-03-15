@@ -35,9 +35,27 @@ function randomAnswer(evt) {
 
 
 
+
+let input = document.querySelector('#questions-box')
+const saveAnswer = () => {
+    
+    
+    let bodyObj = {
+        question: input.value,
+        answer: answer.textContent
+    }
+    
+    axios.post(baseURL, bodyObj)
+    .then(response => {
+        createAnswers(response.data)
+    })
+    .catch(err => console.log(err))
+    
+}
+
 const createAnswers = (arr) => {
     savedList.innerHTML = ""
-
+    
     arr.forEach((answerObj,index) => {
         let { answer, question } = answerObj
         let listItem = document.createElement('li')
@@ -45,7 +63,7 @@ const createAnswers = (arr) => {
         listItem.innerHTML = `<p>question: ${question} answer:${answer}</p> 
         <button onClick='deleteAnswer(${index})' value="${index}">X</button>`
         savedList.appendChild(listItem)
-
+        
     })
 }
 
@@ -60,23 +78,7 @@ const deleteAnswer = (value) => {
 
 
 
-let input = document.querySelector('#questions-box')
 
-const saveAnswer = () => {
-    
-
-    let bodyObj = {
-        question: input.value,
-        answer: answer.textContent
-    }
-
-    axios.post(baseURL, bodyObj)
-        .then(response => {
-            createAnswers(response.data)
-        })
-        .catch(err => console.log(err))
-
-}
 
 
 
