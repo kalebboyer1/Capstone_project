@@ -4,21 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css">
     <title>CAPSTONE_PROJECT</title>
-    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>Test your luck</header>
-    <div>
-        <h3>Need Answers?</h3>
+    
+
+    
+    <div id="content">
+    
+        <h1>Need Answers?</h1>
+    
+        <h2>Ask the magic 8 ball!</h2>
+        <form id="ask-questions">
+            <input
+                type="text"
+                id="questions-box"
+                placeholder="Ask me anything...."/>
+                <br>
+            <button id="submit-questions">Shake Me!</button>
+        </form>
+        <div id="eightBall">
+            <p id="answer">8</p>
+        </div>
+        <button id="save-button" >Save Answer?</button>
+
+    
     </div>
-    <img src="https://images.unsplash.com/photo-1594258497985-78f77d928226?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80">
-    <br>
-    <textarea>Any questions?</textarea>
-    <button id="submit-questions">Submit</button>
-    <button id="delete-saved">Delete Saved</button>
+
+    <main>
+        <section id="saved" >
+            <h2>Your Answers</h2>
+            <ul id="saved-list"></ul>
+        </section>
+    </main>
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="main.js"></script>
+    <script src="/js"></script>
 </body>
 </html>

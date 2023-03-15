@@ -1,24 +1,78 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
 header{
     text-align: center;
-    background-color: green;
+    
     
     font-size: 80px;
 }
 
 body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 50px
-}
-
-h3{
-    text-align: center;
-    font-weight: bolder;
-}
-
-img{
-    height: 200px;
-    width: 300px;
+    background-color: blue;
     
+}
+
+#content {
+    background-color: green;
+    width: 500px;
+    margin: auto;
+    text-align: center;
+    border-style: dotted;
+    border-color: white;
+    
+}
+
+#eightBall {
+    width: 350px;
+    height: 350px;
+    background: black;
+    color: white;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+}
+
+#answer {
+    font-size: 20px;
+}
+
+main{
+    text-align: center;
+}
+
+#saved {
+    margin: auto;
+    margin-top: 50px;
+    background-color: black;
+    width: 500px;
+    align-items: center;
+    border-style: groove;
+    color: white;
+    
+}
+
+#saved-list {
+    margin-top: 50px;
+    
+    text-align: left;
+    
+}
+
+#submit-questions {
+    margin-top: 20px;
+    height: 30px;
+}
+
+#save-button {
+    margin-bottom: 30px;
+    height: 30px;
 }
