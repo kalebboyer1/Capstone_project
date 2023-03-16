@@ -1,6 +1,3 @@
-// const { getAnswers } = require("../server/controller")
-
-// const { response } = require("express")
 
 const form = document.querySelector('form')
 const answer = document.querySelector('#answer')
@@ -59,7 +56,7 @@ const createAnswers = (arr) => {
     arr.forEach((answerObj,index) => {
         let { answer, question } = answerObj
         let listItem = document.createElement('li')
-        // listItem.textContent = `question: ${question} answer:${answer}`
+        
         listItem.innerHTML = `<p>question: ${question} answer:${answer}</p> 
         <button onClick='deleteAnswer(${index})' value="${index}">X</button>`
         savedList.appendChild(listItem)
@@ -90,3 +87,32 @@ const deleteAnswer = (value) => {
 shakeBtn.addEventListener('click', randomAnswer)
 
 saveButton.addEventListener('click', saveAnswer)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const { getAnswers } = require("../server/controller")
+// const { response } = require("express")
